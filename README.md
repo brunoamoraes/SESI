@@ -16,7 +16,7 @@ Repositório centralizado para organização de materiais, notas e projetos das 
 *   **Kernel:** Estudo de gerenciamento de processos, memória e sistemas de arquivos.
 *   **Terminal:** Operação via CLI (Prompt de Comando, PowerShell e Bash).
 
-### 3. 📋 Engenharia de Requisitos
+### 3. 📋 Levantamento de Requisitos
 *   **Elicitação:** Técnicas de **Entrevistas, Brainstorming e Prototipagem**.
 *   **Modelagem:** Documentação de Requisitos Funcionais (RF) e Não Funcionais (RNF).
 *   **Diagramação:** Elaboração de diagramas UML e fluxos de processos.
