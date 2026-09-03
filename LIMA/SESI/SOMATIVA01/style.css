@@ -1,0 +1,272 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+
+    color: #333333;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
+
+    background-color: #1e3a5f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+header h1 {
+
+    font-size: 42px;
+
+    margin: 10px;
+
+}
+
+
+header p {
+
+    font-size: 18px;
+
+}
+
+
+/* ==========================================
+   NAVEGAÇÃO
+========================================== */
+
+nav {
+
+    margin-top: 25px;
+
+}
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    margin: 10px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+main {
+
+    margin: 30px;
+
+}
+
+
+section {
+
+    background-color: white;
+
+    margin-bottom: 30px;
+
+    padding: 30px;
+
+}
+
+
+section h2 {
+
+    color: #1e3a5f;
+
+    font-size: 30px;
+
+    text-align: center;
+
+}
+
+
+section h3 {
+
+    color: #2c5282;
+
+}
+
+
+section p {
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================
+   IMAGEM PRINCIPAL
+========================================== */
+
+.imagem-principal {
+
+    width: 500px;
+
+    max-width: 100%;
+
+    display: block;
+
+    margin: 20px auto;
+
+}
+
+
+/* ==========================================
+   CARDS DE SERVIÇOS
+========================================== */
+
+.card {
+
+    background-color: #eaf2f8;
+
+    border: 1px solid #cccccc;
+
+    margin: 20px;
+
+    padding: 20px;
+
+}
+
+
+/* ==========================================
+   PERFIS DA EQUIPE
+========================================== */
+
+.perfil {
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    margin: 20px;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+.perfil img {
+
+    width: 150px;
+
+    height: 150px;
+
+}
+
+
+/* ==========================================
+   PROJETOS
+========================================== */
+
+.projeto {
+
+    background-color: #f8f8f8;
+
+    border: 1px solid #dddddd;
+
+    margin: 20px;
+
+    padding: 20px;
+
+}
+
+
+.projeto img {
+
+    width: 300px;
+
+    max-width: 100%;
+
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+
+    color: #1e3a5f;
+
+}
+
+
+nav a {
+
+    color: white;
+
+}
+
+
+/* ==========================================
+   BOTÃO
+========================================== */
+
+.botao {
+
+    background-color: #1e3a5f;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    font-size: 16px;
+
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+footer {
+
+    background-color: #1e3a5f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+footer p {
+
+    font-size: 14px;
+
+}
