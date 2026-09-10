@@ -22,5 +22,7 @@ CREATE TABLE IF NOT EXISTS PEDIDO (
     id_cliente INT NOT NULL,
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
     total DECIMAL(10, 2) NOT NULL,
+    
     FOREIGN KEY (id_cliente) REFERENCES CLIENTE(id_cliente)
 );
+
