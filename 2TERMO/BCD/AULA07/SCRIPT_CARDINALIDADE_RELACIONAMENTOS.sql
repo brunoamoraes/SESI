@@ -46,3 +46,23 @@ FOREIGN KEY(Id_Produto) REFERENCES Produto (Id_Produto),
 FOREIGN KEY(Id_Fornecedor) REFERENCES Fornecedor (Id_Fornecedor)
 );
 
+-- DESAFIOS
+-- QUESTÃO 1
+-- CATEGORIA --- POSSUI --- PRODUTO
+-- 1,N E 1,1
+
+-- QUESTÃO 2
+-- FUNCIONARIO  --- REGISTRA --- PEDIDO
+-- 1,N E 1,1
+
+-- QUESTÃO 3
+-- FORNECEDOR  --- FORNECE --- PRODUTO
+-- 1,N E 1,N
+
+-- QUESTÃO 4
+-- CLIENTE --- RESERVA --- MESSAGE_TEXT
+-- 0,N E 1,1
+
+-- QUESTÃO 5
+-- PEDIDO --- POSSUI -- ITEM_PEDIDO
+-- 1,N E 1,1
