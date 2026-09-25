@@ -1,0 +1,47 @@
+body {
+    background-color: #f0f0f0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.cabecalho {
+    background-color: #2B170D;
+}
+
+nav {
+    list-style: none;
+    background-color: #2B170D;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    
+    }
+
+nav a {
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    gap: 10px;
+    align-items: right;
+    
+    margin-left: 10px;
+}
+
+
+.cabecalho {
+  background-color: #2b1408; 
+  display: flex;            
+  align-items: right;
+  justify-content: space-between;
+  padding: 20px;            
+}
+
+.cabecalho img {
+  display: block;
+  height: 500px;              
+  max-height: 50px;
+
+}
+

@@ -63,6 +63,66 @@ CREATE TABLE pagamento (
     CONSTRAINT fk_pagamento_forma_pagamento FOREIGN KEY (id_forma_pagamento) REFERENCES forma_pagamento (id_forma_pagamento)
 );
 
+
+-- INSERINDO DADOS NO BD
+INSERT INTO cliente (nome,email,telefone,cidade,ativo) VALUES
+('Livia Stein','livia@email.com','1999999000','Limeira',TRUE)
+('Arthur Nunes','arthur@email.com','1999999901','Rondonia',TRUE),
+('Beatriz Raissa','beatriz@email.com','1999999902','Limeira',TRUE),
+('Dandara Dias','dandara@email.com','1999999903','Limeira',TRUE),
+('Davi Ferreira','davi@email.com',NULL,'Limeira',TRUE),
+('Felipe Rodrigues','felipe@email.com',NULL,'Limeira',TRUE),
+('Francisco Magri','chico@email.com','199999903','Limeira',TRUE),
+('Franz Kramer','franz@email.com','199999904','Limeira',TRUE),
+('Gabriel Nogueira','gabriel@email.com','199999905','Limeira',TRUE),
+('Gabrielli Araujo','gabrielli@email.com','199999906','Americana',TRUE),
+('Isabella Alves','isabella@email.com',NULL,'Limeira',TRUE),
+('Keynan Santos','keynan@email.com','199999907','Santos',TRUE),
+('Larissa Ramires','larissa@email.com','199999908','Limeira',TRUE),
+('Leonardo Dias','leonardo@email.com','199999909','Valinhos',TRUE),
+('Luana Lima','luana@email.com','199999910','Limeira',TRUE),
+('Luccas Manfredi','lucas@email.com','199999911','Campinas',TRUE);
+
+INSERT INTO categoria (nome) VALUES
+('Cafés'),('Bebidas Geladas'),('Bebidas Quentes'),('Salgados'),('Sobremesas'),('Combo');
+
+-- VERIFICAR ÚLTIMO INSERT REALIZADO OU FEITO
+INSERT INTO categoria (nome) VALUES
+('Doces');
+SET @categoria = LAST_INSERT_ID();
+SELECT @categoria;
+---------------------------------------------
+
+-- ATULIZANDO OU MODIFICANDO DADOS NO BD
+-- LEMBRAR DE SEMPRE EXECUTAR O SELECT PARA ATUALIZAR (UPDATE)
+-- E NUNCA JAMAIS NEVER FAÇA UM UPDATE SEM WHERE 😤
+-- EX 1: MODIFICANDO VALORES INDIVIDUAIS
+UPDATE cliente
+SET telefone = '1988880001'
+WHERE id_cliente = 9
+
+UPDATE cliente
+SET telefone = '000000000'
+
+-- EX 2: MODIFICANDO VÁRIOS VALORES
+UPDATE cliente
+SET telefone = '1999999901',
+    cidade = 'Piracicaba'
+WHERE id_cliente = 9;
+
+
+-- APAGAR DADOS DA TABELA NO BD
+DELETE FROM cliente
+WHERE id_cliente = 9;
+
+
+-- CONSULTAR DADOS NO BD
+SELECT * FROM cliente;
+WHERE id_cliente = 9;
+SELECT * FROM categoria;
+
+
+
 -- INSERINDO DADOS NO BD
 INSERT INTO cliente (nome, email, telefone, cidade, ativo) VALUES
 ('Luis Felipe','luis@email.com','1999999901','Limeira',TRUE),
