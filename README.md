@@ -4,8 +4,6 @@
        width="100%">
 </p>
 
-# 💻 Desenvolvimento de Sistemas — SESI
-
 Repositório acadêmico para acompanhamento da jornada de aprendizagem em **Desenvolvimento de Sistemas**, reunindo códigos, atividades, documentação técnica, experimentos e projetos desenvolvidos durante o curso.
 
 O GitHub faz parte da própria aprendizagem: além de registrar os materiais, ele permite praticar **versionamento, colaboração, documentação e organização profissional de projetos**.
