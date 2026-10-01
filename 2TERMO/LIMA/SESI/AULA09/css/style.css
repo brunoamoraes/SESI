@@ -1,47 +1,753 @@
-body {
-    background-color: #f0f0f0;
-    font-family: "Ubuntu", sans-serif;
+:root {
+    --espresso: #2B170D;
+    --cafe: #5A321B;
+    --caramelo: #C66A1A;
+    --creme: #F3E6D7;
+    --marfim: #FFF9F3;
+    --texto: #1E140F;
+    --muted: #9A887A;
+    --borda: #E7D8C8;
+    --branco: #FFFFFF;
+
+    --sombra-card:
+        0 12px 30px rgba(43, 23, 13, 0.08);
+
+    --raio: 12px;
+    --container: 1200px;
 }
+
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    color: var(--texto);
+    background-color: var(--marfim);
+
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+figure {
+    margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
 
 .cabecalho {
-    background-color: #2B170D;
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding: 16px max(6vw, 24px);
+
+    background-color: var(--espresso);
 }
 
-nav {
-    list-style: none;
-    background-color: #2B170D;
-    color: #fff;
-    padding: 10px;
+.marca {
+    margin: 0;
+
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.marca a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.marca span,
+.marca-rodape span {
+    color: var(--caramelo);
+}
+
+.menu {
     display: flex;
-    flex-direction: row;
-    align-items: right;
-    
+    align-items: center;
+    gap: 26px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.menu a {
+    color: var(--branco);
+
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    color: var(--caramelo);
+}
+
+.menu-cardapio a {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border-radius: 999px;
+
+    background-color: var(--caramelo);
+    color: var(--branco);
+}
+
+.menu-cardapio a:hover,
+.menu-cardapio a:focus-visible {
+    background-color: var(--cafe);
+    color: var(--branco);
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    min-height: 400px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 48px;
+
+    padding:
+        44px max(6vw, 24px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #F7EBDD 0%,
+            var(--marfim) 100%
+        );
+}
+
+.banner-conteudo > p:first-child,
+.sobre-cabecalho > p:first-child,
+.cafe-cabecalho > p:first-child,
+.ambiente-conteudo > p:first-child {
+    margin: 0 0 12px;
+
+    color: var(--caramelo);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.banner-conteudo h1 {
+    max-width: 570px;
+
+    margin: 0 0 16px;
+
+    font-size:
+        clamp(2.6rem, 5vw, 4.2rem);
+
+    line-height: 1.05;
+
+    color: var(--espresso);
+}
+
+.banner-conteudo > p:nth-of-type(2) {
+    margin: 0 0 28px;
+
+    font-size:
+        clamp(1rem, 2vw, 1.25rem);
+}
+
+.banner-conteudo > a {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 999px;
+
+    background-color: var(--caramelo);
+    color: var(--branco);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.banner-conteudo > a:hover,
+.banner-conteudo > a:focus-visible {
+    background-color: var(--cafe);
+    transform: translateY(-2px);
+}
+
+.banner-imagem img {
+    width: 100%;
+    min-height: 300px;
+
+    object-fit: cover;
+
+    border-radius: var(--raio);
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    grid-template-areas:
+        "imagem cabecalho"
+        "imagem texto"
+        "imagem botao";
+
+    column-gap: 50px;
+
+    align-items: center;
+
+    padding:
+        58px max(6vw, 24px);
+
+    background-color: #FFFDF9;
+}
+
+.sobre-imagem {
+    grid-area: imagem;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    min-height: 280px;
+
+    object-fit: cover;
+
+    border-radius: var(--raio);
+}
+
+.sobre-cabecalho {
+    grid-area: cabecalho;
+    align-self: end;
+}
+
+.sobre-cabecalho h2,
+.cafe-cabecalho h2,
+.ambiente-conteudo h2,
+.contato-conteudo h2 {
+    margin: 0;
+
+    color: var(--espresso);
+
+    font-size:
+        clamp(2rem, 3vw, 2.7rem);
+
+    line-height: 1.15;
+}
+
+.sobre > p {
+    grid-area: texto;
+
+    margin: 16px 0 22px;
+
+    font-size: 1.05rem;
+}
+
+.sobre > a {
+    grid-area: botao;
+
+    justify-self: start;
+
+    padding: 10px 24px;
+
+    border: 2px solid var(--caramelo);
+    border-radius: 999px;
+
+    color: var(--espresso);
+
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sobre > a:hover,
+.sobre > a:focus-visible {
+    background-color: var(--caramelo);
+    color: var(--branco);
+}
+
+
+/* =========================
+   CAFÉS
+========================= */
+
+.cafes {
+    padding:
+        62px max(6vw, 24px);
+
+    background-color: var(--creme);
+}
+
+.cafe-cabecalho {
+    margin-bottom: 34px;
+
+    text-align: center;
+}
+
+.lista-cafes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+
+    max-width: var(--container);
+
+    margin: 0 auto;
+    padding: 0;
+
+    list-style: none;
+}
+
+.card-cafe {
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: var(--branco);
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: var(--raio);
+
+    box-shadow: var(--sombra-card);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card-cafe:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 16px 34px
+        rgba(43, 23, 13, 0.12);
+}
+
+.card-cafe img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    background-color: #A8998E;
+}
+
+.card-cafe h3 {
+    margin:
+        22px 22px 8px;
+
+    color: var(--espresso);
+
+    font-size: 1.08rem;
+}
+
+.card-cafe p {
+    min-height: 50px;
+
+    margin:
+        0 22px 12px;
+
+    color: #5D5149;
+}
+
+.card-cafe strong {
+    display: block;
+
+    margin:
+        0 22px 24px;
+
+    color: var(--espresso);
+
+    font-size: 1.15rem;
+}
+
+
+/* =========================
+   AMBIENTE
+========================= */
+
+.ambiente-cabecalho {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 54px;
+
+    padding:
+        56px max(6vw, 24px);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--espresso) 0%,
+            var(--cafe) 100%
+        );
+
+    color: var(--branco);
+}
+
+.ambiente-conteudo h2 {
+    max-width: 520px;
+
+    color: var(--branco);
+}
+
+.ambiente-conteudo > p:nth-of-type(2) {
+    margin:
+        18px 0 26px;
+
+    font-size: 1.05rem;
+}
+
+.ambiente-conteudo > a {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    background-color: var(--caramelo);
+    color: var(--branco);
+
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ambiente-imagem img {
+    width: 100%;
+    min-height: 285px;
+
+    object-fit: cover;
+
+    border-radius: var(--raio);
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato-cabecalho {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: start;
+    gap: 54px;
+
+    padding:
+        56px max(6vw, 24px);
+
+    background-color: var(--marfim);
+}
+
+.contato-conteudo p {
+    margin-top: 16px;
+}
+
+.contato-cabecalho form {
+    display: grid;
+    gap: 8px;
+}
+
+.contato-cabecalho label {
+    margin-top: 4px;
+
+    color: var(--espresso);
+
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.contato-cabecalho input,
+.contato-cabecalho textarea {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border:
+        1px solid #CBB9A8;
+
+    border-radius: 6px;
+
+    background-color: var(--branco);
+
+    color: var(--texto);
+}
+
+.contato-cabecalho textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contato-cabecalho input:focus-visible,
+.contato-cabecalho textarea:focus-visible,
+.contato-cabecalho button:focus-visible,
+a:focus-visible {
+    outline:
+        3px solid
+        rgba(198, 106, 26, 0.45);
+
+    outline-offset: 3px;
+}
+
+.contato-cabecalho button {
+    margin-top: 8px;
+
+    padding: 12px 20px;
+
+    border: 0;
+    border-radius: 6px;
+
+    background-color: var(--caramelo);
+    color: var(--branco);
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.contato-cabecalho button:hover {
+    background-color: var(--cafe);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+    gap: 32px;
+
+    padding:
+        24px max(6vw, 24px);
+
+    background-color: var(--espresso);
+    color: var(--branco);
+}
+
+.marca-rodape {
+    margin: 0;
+
+    font-size: 1.55rem;
+    font-weight: 700;
+}
+
+.rodape-navegacao ul {
+    display: flex;
+
+    justify-content: center;
+    gap: 24px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.rodape-navegacao a,
+.instagram-smartcoffee a {
+    color: var(--branco);
+
+    font-size: 0.9rem;
+
+    text-decoration: none;
+}
+
+.rodape-navegacao a:hover,
+.instagram-smartcoffee a:hover {
+    color: var(--caramelo);
+}
+
+.instagram-smartcoffee {
+    margin: 0;
+}
+
+.instagram-smartcoffee a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.instagram-smartcoffee img {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 980px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
     }
 
-nav a {
-    list-style: none;
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-    gap: 10px;
-    align-items: right;
-    
-    margin-left: 10px;
-}
+    .menu {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
 
-
-.cabecalho {
-  background-color: #2b1408; 
-  display: flex;            
-  align-items: right;
-  justify-content: space-between;
-  padding: 20px;            
-}
-
-.cabecalho img {
-  display: block;
-  height: 500px;              
-  max-height: 50px;
+    .lista-cafes {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
 
 }
 
+
+@media (max-width: 760px) {
+
+    .cabecalho {
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .banner,
+    .ambiente-cabecalho,
+    .contato-cabecalho {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "imagem"
+            "cabecalho"
+            "texto"
+            "botao";
+
+        row-gap: 18px;
+    }
+
+    .sobre-imagem {
+        margin-bottom: 14px;
+    }
+
+    .lista-cafes {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        text-align: center;
+    }
+
+    .rodape-navegacao ul {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .menu-cardapio {
+        width: 100%;
+    }
+
+    .menu-cardapio a {
+        width: 100%;
+    }
+
+    .banner-conteudo h1 {
+        font-size: 2.45rem;
+    }
+
+}
