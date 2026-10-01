@@ -1,0 +1,46 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    color: #fff;
+    background-color: #2B170D;
+    margin: 0;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    align-items: right;
+    background-color: #2B170D;
+    padding: 0px;
+}
+
+nav a {    
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 23px;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 8%;           
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3E6D7;
+    gap: 23px;
+    padding: 60px 8%;
+}
+
+.banner-texto {
+    font-size: 20px;
+    color: #C66A1A;
+    margin-bottom: 10px;
+}
