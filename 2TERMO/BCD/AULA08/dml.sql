@@ -86,12 +86,28 @@ INSERT INTO cliente (nome,email,telefone,cidade,ativo) VALUES
 INSERT INTO categoria (nome) VALUES
 ('Cafés'),('Bebidas Geladas'),('Bebidas Quentes'),('Salgados'),('Sobremesas'),('Combo');
 
+INSERT INTO produto (nome,preco,ativo,id_categoria) VALUES
+('Espetinho de Carne',7.00,TRUE,@categorias_novas);
+
+INSERT INTO pedido (data_pedido, status, valor_total, id_cliente) VALUES ('2026-10-02 08:16:00', 'PREPARANDO', 0.00, 17);
+INSERT INTO pedido (data_pedido, status, valor_total, id_cliente) VALUES (NOW(), 'FINALIZADO', 0.00, 17);
+
 -- VERIFICAR ÚLTIMO INSERT REALIZADO OU FEITO
 INSERT INTO categoria (nome) VALUES
-('Doces');
+('Especiais da House');
 SET @categoria = LAST_INSERT_ID();
 SELECT @categoria;
 ---------------------------------------------
+-- ATRIBUIR NOMES AOS IDS
+INSERT INTO categoria (nome) VALUES
+('Combos Extras');
+SET @categorias_novas = (SELECT nome FROM categoria WHERE nome = 'Combos Extras');
+
+SELECT @categorias_novas;
+
+
+
+SELECT * FROM cliente;
 
 -- ATULIZANDO OU MODIFICANDO DADOS NO BD
 -- LEMBRAR DE SEMPRE EXECUTAR O SELECT PARA ATUALIZAR (UPDATE)
