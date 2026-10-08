@@ -79,13 +79,13 @@ WHERE id_pedido = @pedido_atividade;
 
 -- 11. Atualize valor_total do pedido de acordo com os itens cadastrados.
 --     Você pode calcular previamente com SELECT SUM(quantidade * preco_unitario).
-1-- VERSÃO
+-- VERSÃO 1
 SELECT SUM(quantidade*preco_unitario) AS total
 FROM item_pedido
 WHERE id_pedido = @pedido_atividade;
 
 UPDATE pedido
-SET valor_total = (SELECT SUM(quantidade*preco_unitario) FROM item_pedido WHERE id_pedido=@pedido_atividade)
+SET valor_total = (SELECT SUM(quantidade*preco_unitario) FROM item_pedido WHERE id_pedido = @pedido_atividade)
 
 -- 12. Escolha um dos produtos criados e faça uma exclusão lógica (ativo = FALSE).
 
