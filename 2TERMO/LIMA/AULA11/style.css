@@ -11,8 +11,8 @@
 .grid-img {
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
-    /* grid-template-columns: 2fr 1fr; */
-    grid-template-columns: repeat(autofit, minmax(700px, 2fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(autofit, minmax(700px, 2fr)); */
     gap: 23px;
     list-style: none;
     padding: 0;
@@ -27,21 +27,21 @@ img {
 /* Celular */
 @media (max-width: 500px) {
     .grid-lista {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 /* Tablet */
 @media (max-width: 768px) {
     .grid-lista {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 2fr);
     }
 }
 
 /* Computador */
 @media (max-width: 1024px) {
     .grid-lista {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 2fr);
     }
 }
 
