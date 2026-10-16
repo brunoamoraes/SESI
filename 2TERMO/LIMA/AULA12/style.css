@@ -19,6 +19,8 @@
     --fonte-secundaria: "Open Sans";
 
     /* :root representa o elemento raiz do documento */
+
+    
 }
 
 * {
@@ -37,8 +39,9 @@ body {
     color: var(--cafe);
     background-color: var(--cafe);
     line-height: 1.6;
-
+    background-image: linear-gradient(135deg, #4F46E5, #06B6D4);
 }
+
 
 img {
     max-width: 100%;
