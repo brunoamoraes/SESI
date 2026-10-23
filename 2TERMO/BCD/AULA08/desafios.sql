@@ -119,3 +119,44 @@ INSERT INTO categoria (nome) VALUES
 ('Excluir Depois');
 DELETE from categoria
 WHERE nome = 'Excluir Depois';
+
+-- PARTE D - INTEGRIDADE E ERROS CONTROLADOS
+-- Execute uma tentativa por vez. Depois deixe o comando problemático comentado.
+
+-- 17. Tente inserir um produto com id_categoria = 9999.
+-- Qual restrição impediu a operação?
+
+
+-- 18. Tente cadastrar um cliente usando 'ana@email.com'.
+-- Qual restrição impediu a operação?
+
+
+-- 19. Tente criar um pedido com id_cliente = 9999.
+-- Qual restrição impediu a operação?
+
+
+-- 20. Escreva em comentários a diferença entre os três erros anteriores.
+
+
+-- PARTE E - DESAFIO COMPLETO COM TRANSAÇÃO
+
+-- 21. Inicie uma transação.
+
+
+-- 22. Dentro dela, cadastre um cliente, um pedido e dois itens relacionados.
+
+
+-- 23. Faça uma consulta com JOIN comprovando que os registros existem
+--     enquanto a transação está aberta.
+
+
+-- 24. Execute ROLLBACK e depois use SELECT para provar que o cadastro foi desfeito.
+
+
+-- 25. Repita o processo com novos dados e finalize usando COMMIT.
+--     Depois consulte os registros persistidos.
+
+
+-- DESAFIO EXTRA
+-- 26. Escolha uma situação realista do SmartCoffee que exija INSERT + UPDATE
+--     ou UPDATE + DELETE lógico. Descreva a regra de negócio e implemente.
