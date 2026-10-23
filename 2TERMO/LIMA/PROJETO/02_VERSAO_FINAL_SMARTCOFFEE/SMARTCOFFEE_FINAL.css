@@ -1,0 +1,263 @@
+:root {
+    --espresso: #2B170D;
+    --cafe: #5A321B;
+    --caramelo: #C66A1A;
+    --creme: #F3E6D7;
+    --marfim: #FFF9F3;
+    --taupe: #9A887A;
+    --texto: #1E140F;
+    --branco: #FFFFFF;
+
+    --borda:
+        #E7D8C8;
+
+    --sombra:
+        0 14px 34px
+        rgba(43, 23, 13, 0.09);
+
+    --sombra-hover:
+        0 18px 42px
+        rgba(43, 23, 13, 0.14);
+
+    --raio:
+        14px;
+
+    --espaco-xs:
+        8px;
+
+    --espaco-sm:
+        16px;
+
+    --espaco-md:
+        24px;
+
+    --espaco-lg:
+        40px;
+
+    --espaco-xl:
+        64px;
+
+    --espaco-xxl:
+        80px;
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    box-sizing:
+        border-box;
+}
+
+html {
+    scroll-behavior:
+        smooth;
+}
+
+body {
+    margin:
+        0;
+
+    font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+    color:
+        var(--texto);
+
+    background-color:
+        var(--marfim);
+
+    line-height:
+        1.6;
+}
+
+img {
+    display:
+        block;
+
+    width:
+        100%;
+}
+
+figure {
+    margin:
+        0;
+}
+
+a {
+    color:
+        inherit;
+}
+
+ul {
+    margin:
+        0;
+
+    padding:
+        0;
+
+    list-style:
+        none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top:
+        0;
+}
+
+input,
+textarea,
+button {
+    font:
+        inherit;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho-principal {
+    min-height:
+        88px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        var(--espaco-lg);
+
+    padding:
+        16px max(6vw, 24px);
+
+    background-color:
+        var(--espresso);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.marca {
+    color:
+        var(--branco);
+
+    font-size:
+        1.8rem;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+    line-height:
+        1;
+}
+
+.marca span,
+.marca-rodape span {
+    color:
+        var(--caramelo);
+}
+
+.menu {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        26px;
+}
+
+.menu a {
+    color:
+        var(--branco);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        500;
+
+    text-decoration:
+        none;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    color:
+        #F0B777;
+}
+
+.menu-destaque a {
+    display:
+        inline-block;
+
+    padding:
+        11px 22px;
+
+    border-radius:
+        999px;
+
+    background-color:
+        var(--caramelo);
+}
+
+.menu-destaque a:hover,
+.menu-destaque a:focus-visible {
+    color:
+        var(--branco);
+
+    background-color:
+        #A95412;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   ELEMENTOS GERAIS
+========================= */
+
+.etiqueta {
+    margin-bottom:
+        12px;
+
+    color:
+        var(--caramelo);
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.22em;
+
+    text-transform:
+        uppercase;
+}
+
