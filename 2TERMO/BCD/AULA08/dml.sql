@@ -66,7 +66,7 @@ CREATE TABLE pagamento (
 
 -- INSERINDO DADOS NO BD
 INSERT INTO cliente (nome,email,telefone,cidade,ativo) VALUES
-('Livia Stein','livia@email.com','1999999000','Limeira',TRUE)
+('Livia Stein','livia@email.com','1999999000','Limeira',TRUE),
 ('Arthur Nunes','arthur@email.com','1999999901','Rondonia',TRUE),
 ('Beatriz Raissa','beatriz@email.com','1999999902','Limeira',TRUE),
 ('Dandara Dias','dandara@email.com','1999999903','Limeira',TRUE),
