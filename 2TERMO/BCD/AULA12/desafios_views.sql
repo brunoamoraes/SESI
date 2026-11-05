@@ -1,44 +1,45 @@
-Parte A — Básico Fundamentos
+-- Parte A — Básico Fundamentos
 
-1. Crie vw_produtos_ativos .
+-- 1. Crie vw_produtos_ativos .
 
-2. Consulte apenas produtos da view com preço maior que R$ 10,00.
 
-3. Liste todas as views do banco.
+-- 2. Consulte apenas produtos da view com preço maior que R$ 10,00.
 
-4. Exiba a definição de vw_produtos_ativos .
+-- 3. Liste todas as views do banco.
 
-Parte B — Relacionamentos Intermediário
+-- 4. Exiba a definição de vw_produtos_ativos .
 
-5. Crie vw_produtos_categorias usando INNER JOIN.
+-- Parte B — Relacionamentos Intermediário
 
-6. Crie vw_pedidos_clientes .
+-- 5. Crie vw_produtos_categorias usando INNER JOIN.
 
-7. Consulte somente pedidos FINALIZADOS pela view.
+-- 6. Crie vw_pedidos_clientes .
 
-8. Crie uma view com pedido, produto, quantidade, preço unitário e
-subtotal.
+-- 7. Consulte somente pedidos FINALIZADOS pela view.
 
-Parte C — Relatórios Intermediário/
-Avançado
+-- 8. Crie uma view com pedido, produto, quantidade, preço unitário e
+-- subtotal.
 
-9. Crie vw_vendas_por_produto com SUM e GROUP BY.
+-- Parte C — Relatórios Intermediário/
+-- Avançado
 
-10. Liste os produtos pelo maior faturamento.
+-- 9. Crie vw_vendas_por_produto com SUM e GROUP BY.
 
-11. Crie uma view que apresente todos os clientes e a quantidade de
-pedidos, inclusive zero.
+-- 10. Liste os produtos pelo maior faturamento.
 
-12. Descubra, pela view anterior, clientes que nunca compraram.
+-- 11. Crie uma view que apresente todos os clientes e a quantidade de
+-- pedidos, inclusive zero.
 
-Parte D — Manutenção
+-- 12. Descubra, pela view anterior, clientes que nunca compraram.
 
-13. Use CREATE OR REPLACE para acrescentar id_categoria em uma
-view.
+-- Parte D — Manutenção
 
-14. Crie uma view simples e teste uma atualização permitida pelo SGBD.
+-- 13. Use CREATE OR REPLACE para acrescentar id_categoria em uma
+-- view.
 
-15. Crie uma view de produtos ativos com WITH CHECK OPTION e
-analise seu efeito.
+-- 14. Crie uma view simples e teste uma atualização permitida pelo SGBD.
 
-16. Remova uma view de teste com DROP VIEW IF EXISTS.
+-- 15. Crie uma view de produtos ativos com WITH CHECK OPTION e
+-- analise seu efeito.
+
+-- 16. Remova uma view de teste com DROP VIEW IF EXISTS.
