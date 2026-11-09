@@ -1,0 +1,78 @@
+.imagem-intro {
+    width: 80%;
+    height: 60%; 
+    
+}
+
+.imagem-resp, .imagem-fig {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+}
+
+.imagem-rec {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: 70% center;
+    /* cover - Preenche a caixa, aceitando recorte */
+    /* contain - mostra o conteúdo inteiro */
+    /* fill - preenche sem preservar a proporção */
+    /* scale-down escolhe entre none e contain para evitar ampliar */
+}
+
+.flex {
+    display: flex;
+}
+
+.imagem-capa {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.imagem-ava {
+    
+    width: 120px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 30%;
+}
+
+.imagem-seven {
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(15, 23,42, 0.18);
+    transition: transform .25s ease, filter .25s ease;
+}
+
+.imagem-seven:hover {
+    transform: scale(1.03);
+    filter: sepia(.4);
+}
+
+/* Filtros a utilizar */
+/* grayscale(1)
+sepia(.7)
+brightness(.85)
+contrast(1.15)
+saturate(1.2)
+blur(4px) */
+
+.imagem-gal-pr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.imagem-gal img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 12px;
+}
